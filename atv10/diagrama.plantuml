@@ -1,0 +1,24 @@
+@startuml
+skinparam handwritten false
+skinparam style strict
+
+' Classe do Java usada como base
+class Exception {
+}
+
+' Classe Delta herda de exception e é a mais generica
+class DeltaEx extends Exception {
+}
+
+' todas as outras classes herdam de delta
+class AlphaEx extends DeltaEx {
+}
+
+class BetaEx extends DeltaEx {
+}
+
+class GammaEx extends DeltaEx {
+}
+
+note  : 1º catch: AlphaEx\n2º catch: BetaEx\n3º catch: GammaEx\n4º catch: DeltaEx
+@enduml
